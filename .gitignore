@@ -1,5 +1,5 @@
-.idea/
-target/
-README.md
+.idea
+target
+src/test
 RESTServer.iml
-src/test/
+README.md
