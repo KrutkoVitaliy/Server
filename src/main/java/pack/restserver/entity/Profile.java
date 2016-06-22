@@ -49,11 +49,14 @@ public class Profile {
     @Column(name = "city")
     private String city;
 
-    @Column(name = "adress")
-    private String adress;
+    @Column(name = "address")
+    private String address;
 
     @Column(name = "user_type")
     private String user_type;
+
+    @Column(name = "phone_number")
+    private String phone_number;
 
     public Profile() {
 
@@ -155,12 +158,12 @@ public class Profile {
         this.city = city;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getUser_type() {
@@ -169,5 +172,13 @@ public class Profile {
 
     public void setUser_type(String user_type) {
         this.user_type = user_type;
+    }
+
+    public String getPhone_number() {
+        return phone_number;
+    }
+
+    public void setPhone_number(String phone_number) {
+        this.phone_number = phone_number;
     }
 }

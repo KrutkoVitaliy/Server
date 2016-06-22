@@ -13,45 +13,67 @@ public class Feed {
     @GeneratedValue(generator = "increment")
     @GenericGenerator(name = "increment", strategy = "increment")
     private long id;
+
+    @Column(name = "sid")
+    private String sid;
+
     @Column(name = "title")
     private String title;
+
     @Column(name = "available_date")
     @Temporal(TemporalType.TIMESTAMP)
     private Date availableDate;
-    @Column(name = "author")
-    private String author;
+
+    @Column(name = "likes")
+    private String likes;
+
     @Column(name = "colors")
     private String colors;
+
     @Column(name = "eye_color")
     private String eye_color;
+
     @Column(name = "occasion")
     private String occasion;
+
     @Column(name = "difficult")
     private String difficult;
+
     @Column(name = "tags")
     private String tags;
-    @Column(name = "products")
-    private String products;
+
     @Column(name = "screen1")
     private String screen1;
+
     @Column(name = "screen2")
     private String screen2;
+
     @Column(name = "screen3")
     private String screen3;
+
     @Column(name = "screen4")
     private String screen4;
+
     @Column(name = "screen5")
     private String screen5;
+
     @Column(name = "screen6")
     private String screen6;
+
     @Column(name = "screen7")
     private String screen7;
+
     @Column(name = "screen8")
     private String screen8;
+
     @Column(name = "screen9")
     private String screen9;
+
     @Column(name = "screen10")
     private String screen10;
+
+    @Column(name = "publicate")
+    private boolean publicate;
 
     public Feed() {
 
@@ -79,14 +101,6 @@ public class Feed {
 
     public void setAvailableDate(Date availableDate) {
         this.availableDate = availableDate;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
     }
 
     public String getColors() {
@@ -127,14 +141,6 @@ public class Feed {
 
     public void setTags(String tags) {
         this.tags = tags;
-    }
-
-    public String getProducts() {
-        return products;
-    }
-
-    public void setProducts(String products) {
-        this.products = products;
     }
 
     public String getScreen1() {
@@ -215,5 +221,29 @@ public class Feed {
 
     public void setScreen10(String screen10) {
         this.screen10 = screen10;
+    }
+
+    public String getSid() {
+        return sid;
+    }
+
+    public void setSid(String sid) {
+        this.sid = sid;
+    }
+
+    public String getLikes() {
+        return likes;
+    }
+
+    public void setLikes(String likes) {
+        this.likes = likes;
+    }
+
+    public boolean isPublicate() {
+        return publicate;
+    }
+
+    public void setPublicate(boolean publicate) {
+        this.publicate = publicate;
     }
 }
