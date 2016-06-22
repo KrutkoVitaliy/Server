@@ -15,11 +15,11 @@ public class ApplicationInitializer implements WebApplicationInitializer{
     private final static String DISPATCHER = "dispatcher";
 
     public void onStartup(ServletContext servletContext) throws ServletException {
-        AnnotationConfigWebApplicationContext cntxt = new AnnotationConfigWebApplicationContext();
-        cntxt.register(WebConfig.class);
-        servletContext.addListener(new ContextLoaderListener(cntxt));
+        AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
+        context.register(WebConfig.class);
+        servletContext.addListener(new ContextLoaderListener(context));
 
-        ServletRegistration.Dynamic servlet = servletContext.addServlet(DISPATCHER, new DispatcherServlet(cntxt));
+        ServletRegistration.Dynamic servlet = servletContext.addServlet(DISPATCHER, new DispatcherServlet(context));
         servlet.addMapping("/");
         servlet.setLoadOnStartup(1);
     }
